@@ -8,8 +8,8 @@ CORS(app)  # 启用CORS以允许前端调用
 
 # 灵易万物API的基础URL
 API_BASE = "https://api.lingyiwanwu.com/v1"
-# API密钥，实际应用中应该从环境变量或配置文件中获取
-API_KEY = "bf1973e0425c45559fd319f217d12a22"  # 这里使用文档中提供的API密钥
+# API密钥
+API_KEY = "bf1973e0425c45559fd319f217d12a22"
 
 @app.route('/api/chat/completions', methods=['POST'])
 def chat_completions():
@@ -134,4 +134,4 @@ def index():
     """
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True)
