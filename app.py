@@ -58,5 +58,14 @@ def list_models():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/', methods=['GET'])
+def index():
+    """根路由处理程序"""
+    return jsonify({
+        "status": "ok",
+        "message": "灵易万物API代理服务器正在运行",
+        "version": "1.0.0"
+    })
+
 if __name__ == '__main__':
     app.run()
